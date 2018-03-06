@@ -1,0 +1,18 @@
+.pages {
+	list-style-type: none;
+	float: left;
+	margin: 2px;
+	cursor: pointer;
+}
+
+.pages:hover{
+	color: blue;
+}
+
+.clear{
+	clear: both;
+}
+
+.error {
+	color: red;
+}

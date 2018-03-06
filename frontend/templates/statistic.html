@@ -1,0 +1,21 @@
+<div>
+	<h1>Statistic</h1>
+	<table>
+		<tr>			
+			<th>Item type</th>
+			<th>Count</th>
+		</tr>
+		<tr ng-repeat="item in statisticList track by $index">			
+			<td>{{item.type}}</td>
+			<td>{{count}}</td>			
+		</tr>
+	</table>
+	<!-- Pagination -->
+	<div>
+		<ul ng-repeat=" b in pagesStatAmount track by $index" >
+			<li class="pages"><a ng-click="getStatistic(b+1)">{{b+1}}</a></li>
+		</ul>
+	</div>
+	<div class="clear"></div>
+
+</div>

@@ -1,0 +1,45 @@
+<div>
+	<h1>Items</h1>
+	<form ng-submit="addItem()" novalidate>
+		<legend>add new item</legend>
+		<input type="text" name="itemName" ng-model="items.name" placeholder="item name">
+		<input type="text" name="itemType" ng-model="items.type" placeholder="item type">
+		<button>add</button>
+	</form>
+	<p class="error" ng-repeat="err in addItemError">{{err.msg}}</p>
+
+	<table>
+		<tr>
+			<th>Item name</th>
+			<th>Item type</th>
+			<th>Actions</th>
+		</tr>
+		<tr ng-repeat="item in itemsList">
+			<td>{{item.name}}</td>
+			<td>{{item.type}}</td>
+			<td>
+				<button ng-click='deleteItem(item._id)'>delete</button>
+				<button ng-click='editItem(item._id, item.name, item.type)'>edit</button>
+			</td>
+		</tr>
+	</table>
+	<!-- Pagination -->
+	<div>
+		<ul ng-repeat=" a in pagesAmount track by $index" >
+			<li class="pages"><a ng-click="getList(a+1)">{{a+1}}</a></li>
+		</ul>
+	</div>
+	<div class="clear"></div>
+
+	<div ng-show="editFormStatus">
+		<form ng-submit="submitEditItem()" novalidate>
+			<legend>edit item</legend>
+			<input type="text" name="itemName" ng-model="item.name" placeholder="item name">
+			<input type="text" name="itemType" ng-model="item.type" placeholder="item type">
+			<input type="hidden" name="id" ng-model="item.id">
+			<button>edit</button>
+		</form>
+	</div>
+	<p class="error" ng-repeat="err in editItemError">{{err.msg}}</p>
+
+</div>

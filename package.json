@@ -1,0 +1,26 @@
+{
+  "name": "Items-statistics",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "angular-ui-bootstrap": "^2.5.6",
+    "async": "^2.6.0",
+    "bcrypt": "^1.0.3",
+    "body-parser": "~1.18.2",
+    "connect-busboy": "0.0.2",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "express-session": "^1.15.6",
+    "express-validator": "^4.3.0",
+    "file-system": "^2.2.2",
+    "mongoose": "^5.0.0",
+    "mongoose-pages": "0.0.3",
+    "nodemon": "^1.14.11",
+    "serve-favicon": "~2.4.5"
+  }
+}
